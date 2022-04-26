@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Red Hat Display", sans-serif;
+    src: url("/public/fonts/Red_Hat_Display/static/RedHatDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+
+    /* Fonts */
+    --font: "Red Hat Display", sans-serif;
+}
+
+body {
+    font-family: var(--font);
+}
