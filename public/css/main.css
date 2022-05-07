@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "Red Hat Display", sans-serif;
-    src: url("/public/fonts/Red_Hat_Display/static/RedHatDisplay-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 :root {
     /* Colors */
@@ -11,6 +6,8 @@
     --Light-gray: hsl(212, 45%, 89%);
     --Grayish-blue: hsl(220, 15%, 55%);
     --Dark-blue: hsl(218, 44%, 22%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
 
     /* Fonts */
     --font: "Red Hat Display", sans-serif;
@@ -18,4 +15,157 @@
 
 body {
     font-family: var(--font);
+    background-color: var(--Pale-blue);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 0.5rem;
+}
+
+.card-header img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-body-title {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 1.3em;
+    padding-top: 1.5rem;
+}
+
+.card-body-content {
+    padding: 2rem 2rem 0 2rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--Grayish-blue);
+    line-height: 1.5rem;
+}
+
+.card-body-plan {
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-body-plan-icon {
+    margin: 0 1rem 0 1rem;
+}
+
+.card-body-plan-price {
+    margin: 0 1rem 0 1rem;
+}
+
+.card-body-plan-price p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-body-plan-price :first-child {
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+.card-body-plan-price :last-child {
+    color: var(--Grayish-blue);
+}
+
+.card-body-plan-btn {
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+.card-body-plan-btn:hover {
+    color:hsl(245, 75%, 70%);
+}
+
+.card-body-footer {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.card-body-footer input {
+    margin: 0.2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.card-body-footer :first-child {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: var(--White);
+    font-weight: 900;
+    box-shadow: 0rem 0.8rem 2rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-first:hover {
+    background-color: hsl(245, 75%, 70%);
+}
+
+.card-body-footer :last-child {
+    border: none;
+    background: none;
+    color: var(--Grayish-blue);
+    font-weight: 700;
+}
+
+.btn-sec:hover {
+    color: var(--Dark-blue);
+}
+@media screen and (max-width: 1440px) {
+    body {
+        background: url("../../images/pattern-background-desktop.svg") no-repeat
+            var(--Pale-blue);
+    }
+
+    .card {
+        width: 400px;
+        height: 600px;
+    }
+
+    .card-header img {
+        width: 400px;
+    }
+
+    .card-body-title {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url("../../images/pattern-background-mobile.svg") no-repeat
+            var(--Pale-blue);
+    }
+
+    .card {
+        width: 330px;
+        height: 550px;
+    }
+
+    .card-header img {
+        width: 330px;
+    }
 }
